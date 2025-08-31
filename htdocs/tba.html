@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fit Future | Home</title>
+  <style>
+    :root{
+      --maxw: 900px;
+      --gap: 16px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.5;
+      color:#111;
+      background:#f7f7f9;
+    }
+    header{
+      background:#ffffff;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:12px var(--gap);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand h1{
+      font-size:1.25rem;
+      margin:0;
+      letter-spacing:.2px;
+    }
+    nav ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    nav a{
+      text-decoration:none;
+      color:#111;
+      padding:6px 10px;
+      border-radius:8px;
+    }
+    nav a:hover{ background:#f0f0f3; }
+
+    main{ padding:24px 0 48px; }
+
+    /* Placeholder “image” box with an X */
+    .placeholder{
+      width:100%;
+      aspect-ratio: 16/9;           /* adjust as needed */
+      border:2px dashed #b9c0d0;
+      border-radius:12px;
+      position:relative;
+      background:#fff;
+      margin: 8px 0 12px;
+    }
+    .placeholder::before,
+    .placeholder::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(45deg, transparent 48%, #b9c0d0 48%, #b9c0d0 52%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, #b9c0d0 48%, #b9c0d0 52%, transparent 52%);
+      opacity:.7;
+      border-radius:10px;
+    }
+
+    .hero{
+      background:#ffffff;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:16px;
+      margin-bottom:var(--gap);
+    }
+    .hero h2{ margin:8px 0 6px; }
+    .hero p{ margin:0; color:#374151; }
+
+    section{
+      background:#ffffff;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:16px;
+      margin: var(--gap) 0;
+    }
+    section h3{ margin-top:0; }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:var(--gap);
+    }
+    @media (max-width:720px){
+      .grid{ grid-template-columns:1fr; }
+    }
+
+    footer{
+      border-top:1px solid #e5e7eb;
+      background:#ffffff;
+      color:#4b5563;
+    }
+    footer p{ margin:0; padding:16px 0; font-size:.95rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap brand">
+      <h1>Fit Future</h1>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="home.html" aria-current="page">Home</a></li>
+          <li><a href="BenOfFit.html">Benefits</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="placeholder" aria-hidden="true" title="Hero image placeholder (X)"></div>
+      <h2 id="hero-title">Move More, Live Better</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit ac nisi
+         fringilla pharetra. Integer non nibh vitae dui pulvinar feugiat.</p>
+    </section>
+
+    <!-- ABOUT ME + INTRO -->
+    <section aria-labelledby="about-title">
+      <h3 id="about-title">About Me</h3>
+      <div class="grid">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu lorem non nunc dictum
+            scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            Integer dictum, nisl sit amet laoreet viverra, tortor lectus fermentum lacus, non aliquet nibh
+            velit et erat.
+          </p>
+        </div>
+        <div>
+          <div class="placeholder" title="Profile/intro image placeholder (X)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVE LIFESTYLE OVERVIEW -->
+    <section aria-labelledby="active-title">
+      <h3 id="active-title">Active Lifestyle: Key Ideas</h3>
+      <div class="grid">
+        <!-- Fitness -->
+        <div>
+          <h4>Fitness</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras
+             tincidunt sapien id libero interdum, nec gravida augue malesuada.</p>
+          <div class="placeholder" title="Image placeholder (X)"></div>
+        </div>
+        <!-- Digital Balance -->
+        <div>
+          <h4>Balanced Digital Use</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales nunc vitae
+             metus dapibus, a vulputate nibh volutpat.</p>
+          <div class="placeholder" title="Image placeholder (X)"></div>
+        </div>
+        <!-- Mental & Physical Capacity -->
+        <div>
+          <h4>Mind & Body Capacity</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim, ipsum
+             non facilisis posuere, nibh arcu tristique risus, a volutpat mauris quam in urna.</p>
+          <div class="placeholder" title="Image placeholder (X)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMPLE NAV PROMPT / CTA -->
+    <section aria-labelledby="next-title">
+      <h3 id="next-title">Ready to Learn the Benefits?</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem ac elit pharetra
+         feugiat. <a href="BenOfFit.html">Go to Benefits of Fitness</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2025 Fit Future · <a href="home.html">Home</a> · <a href="BenOfFit.html">Benefits</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
